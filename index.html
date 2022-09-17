@@ -7,7 +7,7 @@
 </head>
 <body>
 	<div.style="color:black">
-		<form action="/predict" method="post">
+		<form action="{{url_for('predict')}}" method="post">
 			<h2>Predictive Analysis</h2>
 			<h3>Year in which you purchased the Car</h3>
 			<input id="first" name="Year" placeholder="Purchased Year" type="number">
