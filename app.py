@@ -9,14 +9,16 @@ Original file is located at
 
 import numpy as np
 from flask import Flask, request, jsonify,render_template
+import requests
 import pickle
 from sklearn.preprocessing import StandardScaler
 from datetime import date
+import sklearn
 
 app= Flask(__name__)
 model= pickle.load(open('Car_prediction.pkl','rb'))
 
-@app.route('/')
+@app.route('/',methods=['GET'])
 def home():
   return render_template('index.html')
 
@@ -63,5 +65,5 @@ def predict():
   else:
     return render_template('index.html')
 
-if __name__=='__main__':
+if __name__=="__main__":
   app.run(debug=True)
