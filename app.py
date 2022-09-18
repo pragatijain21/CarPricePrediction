@@ -19,7 +19,7 @@ app= Flask(__name__)
 model= pickle.load(open('Car_prediction.pkl','rb'))
 
 @app.route('/',methods=['GET'])
-def home():
+def Home():
   return render_template('index.html')
 
 
