@@ -55,7 +55,7 @@ def predict():
       Transmission_Manual=1
     else:
       Transmission_Manual=0
-    features= np.array(['Present_Price','Kms_Driven','Owner','Year','Fuel_Type_Diesel','Fuel_Type_Petrol','Seller_Type_Individual','Transmission_Manual'])
+    features= np.array([Present_Price,Kms_Driven,Owner,Year,Fuel_Type_Diesel,Fuel_Type_Petrol,Seller_Type_Individual,Transmission_Manual])
     y_predict= model.predict([features])
     output= round(y_predict[0],2)
     if output<0:
